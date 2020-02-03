@@ -373,6 +373,23 @@
         }
       }
     },
+    "/hello": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "repository"
+        ],
+        "summary": "Say hello world from Brad",
+        "operationId": "bradHelloWorld",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/HelloBrad"
+          }
+        }
+      }
+    },
     "/markdown": {
       "post": {
         "consumes": [
@@ -11121,6 +11138,16 @@
       },
       "x-go-package": "code.gitea.io/gitea/modules/structs"
     },
+    "HelloBrad": {
+      "type": "object",
+      "properties": {
+        "hello": {
+          "type": "string",
+          "x-go-name": "Hello"
+        }
+      },
+      "x-go-package": "code.gitea.io/gitea/modules/structs"
+    },
     "Hook": {
       "description": "Hook a hook is a web hook when one repository changed",
       "type": "object",
@@ -12948,6 +12975,12 @@
       "description": "GitTreeResponse",
       "schema": {
         "$ref": "#/definitions/GitTreeResponse"
+      }
+    },
+    "HelloBrad": {
+      "description": "HelloBrad",
+      "schema": {
+        "$ref": "#/definitions/HelloBrad"
       }
     },
     "Hook": {

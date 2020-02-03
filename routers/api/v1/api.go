@@ -512,6 +512,7 @@ func RegisterRoutes(m *macaron.Macaron) {
 		m.Get("/signing-key.gpg", misc.SigningKey)
 		m.Post("/markdown", bind(api.MarkdownOption{}), misc.Markdown)
 		m.Post("/markdown/raw", misc.MarkdownRaw)
+		m.Get("/hello", repo.BradHelloWorld)
 
 		// Notifications
 		m.Group("/notifications", func() {

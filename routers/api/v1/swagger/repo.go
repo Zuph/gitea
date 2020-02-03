@@ -148,6 +148,13 @@ type swaggerResponseWatchInfo struct {
 	Body api.WatchInfo `json:"body"`
 }
 
+// HelloBrad
+// swagger:response HelloBrad
+type swaggerResponseHelloBrad struct {
+	// in:body
+	Body api.HelloBrad `json:"body"`
+}
+
 // SearchResults
 // swagger:response SearchResults
 type swaggerResponseSearchResults struct {

@@ -582,6 +582,19 @@ func Get(ctx *context.APIContext) {
 	ctx.JSON(http.StatusOK, ctx.Repo.Repository.APIFormat(ctx.Repo.AccessMode))
 }
 
+func BradHelloWorld(ctx *context.APIContext) {
+	// swagger:operation GET /hello repository bradHelloWorld
+	// ---
+	// summary: Say hello world from Brad
+	// produces:
+	// - application/json
+	// responses:
+	//   "200":
+	//     "$ref": "#/responses/HelloBrad"
+
+	ctx.JSON(http.StatusOK, &api.HelloBrad{Hello:"Hello World!"})
+}
+
 // GetByID returns a single Repository
 func GetByID(ctx *context.APIContext) {
 	// swagger:operation GET /repositories/{id} repository repoGetByID
